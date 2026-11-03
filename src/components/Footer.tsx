@@ -88,7 +88,37 @@ export function Footer() {
       </div>
 
       <div className="shell flex flex-col gap-4 border-t border-line py-6 text-[0.8rem] text-ink-faint sm:flex-row sm:items-center sm:justify-between">
-        <p>© {YEAR} Truckify. All rights reserved. | Designed & built by <a href="https://www.syncognix.com" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center font-semibold tracking-wide transition-colors" aria-label="Syncognix — Designed and built this website (opens in a new tab)" style="font-family: Outfit, sans-serif; background: linear-gradient(135deg, rgb(201, 161, 64) 0%, rgb(240, 208, 128) 50%, rgb(203, 169, 87) 100%) text; -webkit-text-fill-color: transparent;">Syncognix<span class="ml-1 inline-block transition-transform group-hover:translate-x-0.5" aria-hidden="true" style="color: rgb(240, 208, 128); -webkit-text-fill-color: rgb(240, 208, 128);">↗</span><span class="absolute left-0 -bottom-0.5 h-px w-0 group-hover:w-full transition-all duration-300" aria-hidden="true" style="background: linear-gradient(90deg, rgb(201, 161, 64), rgb(240, 208, 128));"></span></a> </p>
+        <p>
+          © {YEAR} Truckify. All rights reserved. | Designed &amp; built by{' '}
+          <a
+            href="https://www.syncognix.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center font-semibold tracking-wide transition-colors"
+            aria-label="Syncognix — Designed and built this website (opens in a new tab)"
+            style={{
+              fontFamily: 'Outfit, sans-serif',
+              background: 'linear-gradient(135deg, rgb(201, 161, 64) 0%, rgb(240, 208, 128) 50%, rgb(203, 169, 87) 100%)',
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}
+          >
+            Syncognix
+            <span
+              className="ml-1 inline-block transition-transform group-hover:translate-x-0.5"
+              aria-hidden="true"
+              style={{ color: 'rgb(240, 208, 128)', WebkitTextFillColor: 'rgb(240, 208, 128)' }}
+            >
+              ↗
+            </span>
+            <span
+              className="absolute -bottom-0.5 left-0 h-px w-0 transition-all duration-300 group-hover:w-full"
+              aria-hidden="true"
+              style={{ background: 'linear-gradient(90deg, rgb(201, 161, 64), rgb(240, 208, 128))' }}
+            />
+          </a>
+        </p>
         <ul className="flex gap-6">
           {LEGAL_LINKS.map((l) => (
             <li key={l.href}>
