@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
 import { useSmoothScroll } from '../lib/smooth-scroll'
+import { LogoMark } from './Logo'
 
 const SEEN_KEY = 'truckify-intro-seen'
 const DURATION_MS = 3000
@@ -157,7 +158,10 @@ export function SplashScreen({ children }: { children: ReactNode }) {
         >
           <div aria-hidden className="hairline-grid pointer-events-none absolute inset-0 opacity-50" />
           <div className="label relative flex items-center justify-between gap-5 text-ink-faint">
-            <span className="text-ink">Truckify · Dispatch Desk</span>
+            <span className="flex items-center gap-2.5 text-ink">
+              <LogoMark className="size-6" />
+              Truckify · Dispatch Desk
+            </span>
             <span className="hidden sm:inline">Owner-operators / Small fleets</span>
           </div>
 
